@@ -1,2 +1,2 @@
 # ToDoList
-To Do List created in JavaScript
+To Do List created in JQuery
