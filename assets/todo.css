@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  :root {
+    /* font family */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    --hoverColor: rgb(215, 52, 68);
+    --colorEase: color .2s ease-out,  2s ease-in;
+  
+    /* color scheme */
+    --default: rgb(73, 92, 112);
+    --gradient1: linear-gradient(to bottom, #184555, #006564, #2d824e, #8b9626, #f39530);
+    --footerGradient: linear-gradient(to bottom,rgb(25, 85, 140) 50%, rgb(4,12,14) 35%, rgb(43, 90, 132) 20%, );
+    
+    /* shadow */
+    --dropShadow: 1px 0 25px rgba(0, 0, 0, 0.25);
+    --boxShadowDiv: 0 14px 28px rgba(0,0,0,0.75), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(255,255,255);
+  background:var(--default);
+}
+
+h1{
+  font-size: 3.0rem;
+}
+h2{
+  font-size: 3.0rem;
+}
+h3 {
+  text-align: center;
+}
+
+h1,h2,header  {
+  -o-transition: var(--colorEase);
+  -ms-transition: var(--colorEase);
+  -moz-transition: var(--colorEase);
+  -webkit-transition: var(--colorEase);
+  transition: var(--colorEase);
+  text-align: center;
+}
+
+h1:hover, h2:hover, h3:hover, header:hover{
+  color:var(--hoverColor);
+  -o-transition: var(--colorEase);
+  -ms-transition: var(--colorEase);
+  -moz-transition: var(--colorEase);
+  -webkit-transition: var(--colorEase);
+  transition: var(--colorEase);
+}
+
+button {
+  background-color: rgb(76, 175, 80); 
+  border-radius: 5px;
+  border: 0;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.5rem;
+  color: rgb(255,255,255);
+  align-content: center;
+}
+
+button:hover {
+  background: rgb(244, 67, 54);
+}
+  
+/* Header/Footer */
+header, footer {
+  text-align: center;
+  margin: auto;
+}
+
+  /* grid for main content */
+  
+main{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.task-list{
+  width: 250px;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(22, 45, 71);
+  height: auto;
+  border-radius: 10px;
+}
+
+.todo-task{
+  border-radius: 5px;
+  border-bottom: dashed 3px rgb(168,235,18);
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  padding: 5px;
+  overflow: auto;
+  cursor: move;
+}
+
+.todo-task > .task-header{
+  font-weight: bold;
+  background-color: rgb(37, 70, 107);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.todo-task > .task-date{
+  font-size: 0.85em;
+  font-style: italic;
+  padding: 5px;
+}
+
+.todo-task > .task-description{
+  font-size: 0.85em;
+  background-color: rgb(37, 70, 107);
+  border-radius: 5px;
+  padding: 5px;
+  overflow-wrap: break-word;
+}
+
+#delete-div{
+  display: none;
+  border: 3px dotted #000;
+  margin: 10px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  background: rgb(68, 84, 102);
+}
+
+#completed{
+  text-decoration: line-through;
+}
+
+input,textarea{
+  margin: 5px auto;
+  background: rgb(37, 70, 107);
+  border: none;
+  width: 100%;
+  height: auto;
+  font-style: italic;
+  color: rgb(255,255,255);
+}
+
+/* responsive code */
+@media screen and (max-width: 640px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: auto 10%;
+  }
+
+  h1{
+    font-size: 2.0rem;
+  }
+}
